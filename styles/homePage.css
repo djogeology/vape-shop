@@ -1,0 +1,199 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(241, 233, 233);
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 3vh;
+    min-height: 8vh;
+    background-color: aqua;
+    font-family: 'Poppins', sans-serif;
+}
+
+.logo{
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 20px;
+
+}
+
+.nav-links{
+    display: flex;
+    justify-content: space-around;
+    width: 40%;
+}
+
+.nav-links a:hover{
+    color: orange;
+}
+.nav-links li{
+    list-style: none;
+}
+
+.nav-links a {
+    color: rgba(22, 8, 8, 0.884);
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.burger{ /* three lines to hide the list */
+    display: none;
+    cursor: pointer;
+}
+
+.burger div{
+    width: 25px;
+    height: 4px;
+    background-color: #000;
+    margin: 2px;
+}
+
+.vape{
+    position: relative;
+    padding: 100px 0%;
+    font-size: 3rem;
+    font-weight: bold;
+    font-style: italic;
+}
+li{
+    padding: 100px 50px;
+    list-style: none;
+    font-size: large;
+}
+li:hover{
+    color: orange;
+}
+.best-sales-slider{
+    height: 250px;
+    margin: 0 50px;
+    position: relative;
+    width: 90%;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+
+}
+
+.slide-track1{
+    display: flex;
+    width: calc(250px*12);
+    animation: scroll 40s linear infinite;
+}
+.slide-track1:hover{
+    animation-play-state: paused;
+}
+
+@keyframes scroll {
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(calc(-250px* 9));
+    }
+}
+
+.slide{
+    height: 200px;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    perspective: 100px;
+}
+img{
+    width: 100%;
+    transition: transform 1s;
+}
+img:hover{
+    transform: translateZ(20px);
+}
+
+.best-sales-slider::before,
+.best-sales-slider::after {
+    background: linear-gradient(to right,rgba(255,255,255,1)0%,
+    rgba(255,255,255,0)100%);
+    content: '';
+    position: absolute;
+    width: 15%;
+    z-index: 2;
+
+}
+
+.best-sales-slider::before{
+    left: 0;
+    top: 0;
+}
+
+.best-sales-slider::after{
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg);
+}
+
+
+@media  screen and (max-width:1024px) { /*spacement when the screen modified*/
+    .nav-links{
+        width: 60%;
+    }
+
+}
+
+@media  screen and (max-width:768px){ /* to make the list in burguer*/
+    body{
+        overflow-x: hidden; /*hide the over x*/
+    }
+    .nav-links{
+    position: absolute;
+    right: 0px;
+    height: 92vh;
+    top: 8vh;
+    background-color: chocolate;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    transform: translateX(100%); /*make the liste out of wind*/
+    transition: transform 0.5s ease-in; /*time to inter*/
+    }
+
+    .nav-links li{ /*to hide the list*/
+    opacity: 0;
+    }
+
+   .burger{
+    display: block;
+    }
+  
+
+}
+
+.nav-active{
+ transform: translateX(0%); /*reveale the liste*/
+}
+
+@keyframes navLinkFade {
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+  }
+
+ 
+

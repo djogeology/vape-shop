@@ -110,7 +110,7 @@ function addToCard(key){
     }
     reloadCard();
 }
-function reloadCard(){
+function reloadCard(){ // no //
     listCard.innerHTML = '';
     let count = 0;
     let totalPrice = 0;

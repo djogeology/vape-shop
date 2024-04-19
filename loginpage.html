@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/mainstyle.css">
+    <title>My Vape Shop</title>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <h4>My Vape</h4>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Vapes</a></li>
+            <li><a href="#">Pods</a></li>
+            <li><a href="#">E-liquids</a></li>
+        </ul>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+    <war>
+        <div class="warning">
+            <p>WARNING: This product contains nicotine. Nicotine is an addictive chemical.</p>
+            <p>! By entering our website, you affirm that you are of legal smoking age !</p>
+          </div>
+    </war>
+    <log-sign>
+        <div class="container">
+ 
+            <!-- upper button section to select
+                 the login or signup form -->
+            <div class="slider"></div>
+            <div class="btn">
+                <button class="login">Login</button>
+                <button class="signup">Signup</button>
+            </div>
+     
+            <!-- Form section that contains the
+                 login and the signup form -->
+            <div class="form-section">
+     
+                <!-- login form -->
+                <div class="login-box" id="login">
+                    <div class="Wmessage">Please Login or Create a new Account</div>
+                    <input type="text" class="userName ele" id="user" placeholder="User Name" required>
+                    <input type="password" class="password ele" id="pass" placeholder="password">
+                    <button class="clkbtn" type="submit" onclick="signIn()">Login</button>
+                </div>
+     
+                <!-- signup form -->
+                <div class="signup-box" id="createAccount">
+                    <input type="text" class="reguserName ele" id="usr" placeholder="Enter your name">
+                    <input type="email" class="regemail ele" id="eml" placeholder="youremail@email.com">
+                    <input type="password" class="regpassword ele" id="psd" placeholder="password">
+                    <button class="clkbtn" type="submit" onclick="signUpStr()">Signup</button>
+                </div>
+            </div>
+        </div>
+    </log-sign>
+    <script src="/javascript codes/mainscript.js"></script>
+</body>
+</html>
